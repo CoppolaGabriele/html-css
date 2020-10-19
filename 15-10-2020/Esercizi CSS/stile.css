@@ -1,0 +1,10 @@
+
+		/* Tag che ha l'attributo id="uno" */
+		#uno{
+			color:red;
+			background: violet;
+		}
+		/* Tutti i tag che hanno l'attributo class="com" */
+		.com{
+			color:yellow;		
+		}

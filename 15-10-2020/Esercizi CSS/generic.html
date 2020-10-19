@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css">
+		h1 {font-size:17px; color:green}
+		h2 {font-family:arial; color:red}
+		</style>
+		<style type="text/css">
+
+			/* Tag che ha l'attributo id="uno" */
+			#uno{
+				color:red;
+			}
+
+			/* Pseudoclasse dove si indica il selettore, poi ":" e poi il tipo di evento che deve avvenire*/
+			#uno:hover{
+				background: red;
+			}
+
+			input:focus{
+				border:1px solid #ff3300;
+			}
+
+
+
+			/* Tutti i tag che hanno l'attributo class="com" */
+			.com{
+				color:purple;		
+			}
+
+
+			/* Specificatori di accesso */
+			p.com {
+				font-size: 30px;
+			}
+
+
+			div.com{
+				font-size: 30px;
+			}
+
+		</style>
+	</head>
+	<body>
+		<h1>Tutti gli h1 sono di colore verde</h1>
+		<h1>Anche io sono verde</h1>
+		<h2>Tutti gli h2 sono di colore rosso</h2>
+
+		<div id="uno" class="com">Paolo è magico</div> <!-- L'id in questo caso ha più valore della classe-->
+		<div id="due" class="com">Paolo è magico</div>
+		<div id="tre" class="com">Paolo è magico</div>
+		<p class="com">Ciao miao bau</p>
+		<p class="com">Ciao bour</p>
+
+		<div style="font-size:18px; font-family:arial; color:red">Boh</div>
+	</body>
+</html>

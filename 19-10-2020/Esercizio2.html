@@ -1,0 +1,153 @@
+<!-- Creare dinamicamente una tabella con nome cognome e codice fiscale che contenga 3 nome di amici -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Hello, world!</title>
+    <style type="text/css">
+      
+      table {
+        border: solid;
+        text-align: left;
+        border-collapse: collapse; 
+             }
+
+      th {
+        background-color: grey;
+        color: white;
+      }
+
+
+    </style>
+  </head>
+  <body>
+
+    <h1>Ciao Mondo</h1>
+
+    <div id="div_uno"></div>
+
+    <script type="text/javascript">
+
+
+     // Creazione riferimento tabella
+     var table = document.createElement("table");
+
+     // Creazione riferimento a "div_uno"
+     var rif= document.getElementById("div_uno");
+     // Si appende table a rif(div_uno)
+     rif.appendChild(table);
+
+     // Creazione riferimento thead
+     var tHead = document.createElement("thead");
+     // Si appende thead a table
+     table.appendChild(tHead);
+     
+     // Creato la tr del thead
+     var trHead = document.createElement("tr");
+     // Appesa la tr alla thead
+     tHead.appendChild(trHead);
+
+     // Creata la prima th del thead nella singola tr 
+     var thUno = document.createElement("th");
+     // Appesa la prima tag th al tag thead
+     trHead.appendChild(thUno);
+     // Viene assegnato al tag th chiamato "thUno" il valore "Nome"
+     thUno.innerHTML= "Nome";
+     
+     // Creata la seconda th del thead nella singola tr 
+     var thDue = document.createElement("th");
+     // Appeso il secondo tag tr al tag thead
+     trHead.appendChild(thDue);
+     // Asseganto al tag th chiamato "thDue" il valore "Cognome"
+     thDue.innerHTML= "Cognome";
+
+     // Creata la terza th del thead nella singola tr 
+     var thTre = document.createElement("th");
+     // Appesa il terzo tag  th al tag tr della thead
+     trHead.appendChild(thTre);
+     thTre.innerHTML = "Codice Fiscale"; 
+     
+    
+     
+     // Creato il tag body e appeso alla table
+     var tBody = document.createElement("tbody");
+     table.appendChild(tBody);
+
+     
+     // Creato il riferimento alla prima tr del tbody
+     var trUnoBody = document.createElement("tr");
+     // Appesa la prima tr al tbody
+     tBody.appendChild(trUnoBody);
+
+     // Creata il riferimento alla prima td della prima tr
+     var tdFirst1= document.createElement("td");
+     // Appesa alla prima tr del tbody
+     trUnoBody.appendChild(tdFirst1);
+     // Assegnato alla td il valore "Giacomo"
+     tdFirst1.innerHTML = "Giacomo";
+
+    
+     // Creato riferimento alla seconda td
+     var tdFirst2= document.createElement("td");
+     // Appesa alla prima tr del tbody
+     trUnoBody.appendChild(tdFirst2);
+     // Assegnato il valore "Poretti" alla seconda td della prima tr del tbody
+     tdFirst2.innerHTML = "Poretti";
+
+    
+     // Creato riferimento alla terza td
+     var tdFirst3= document.createElement("td");
+     // Appesa la terza td alla prima tr del tbody
+     trUnoBody.appendChild(tdFirst3);
+     // Assegnato il valore alla terza td della prima tr del tbody
+     tdFirst3.innerHTML = "CSPDPSADOSDPAPDO99";
+
+
+
+
+     // Vengono ripetute le stesse operazioni ma per la seconda tr della tabella
+     var trDueBody = document.createElement("tr");
+     tBody.appendChild(trDueBody);
+
+     var tdSecond1= document.createElement("td");
+     trDueBody.appendChild(tdSecond1);
+     tdSecond1.innerHTML = "Paolo";
+
+     var tdSecond2= document.createElement("td");
+     trDueBody.appendChild(tdSecond2);
+     tdSecond2.innerHTML = "Limiti";
+
+     var tdSecond3= document.createElement("td");
+     trDueBody.appendChild(tdSecond3);
+     tdSecond3.innerHTML = "SAFSAFSFA8383SFSFA";
+
+     
+
+
+     // Vengono ripetute le stesse operazioni ma per la terza tr della tabella
+     var trTreBody = document.createElement("tr");
+     tBody.appendChild(trTreBody);
+
+     var tdThird1= document.createElement("td");
+     trTreBody.appendChild(tdThird1);
+     tdThird1.innerHTML = "Andrea";
+
+     var tdThird2= document.createElement("td");
+     trTreBody.appendChild(tdThird2);
+     tdThird2.innerHTML = "Galli";
+
+     var tdThird3= document.createElement("td");
+     trTreBody.appendChild(tdThird3);
+     tdThird3.innerHTML = "ARASDSANNDN55";
+    
+
+      
+
+
+    </script>
+  </body>
+</html>

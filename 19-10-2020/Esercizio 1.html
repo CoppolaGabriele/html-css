@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Hello, world!</title>
+    
+  </head>
+  <body>
+    <div id="uno" style="color:red"> 
+      lorem impssdsa
+    </div>
+
+    <input type="text" id="due" value="cocco">
+
+    <script type="text/javascript">
+
+      // geteElementById prende in input una stringa che è il valore dell'attributo id del tag di cui si vuole il riferimento
+      var riferimento_div= document.getElementById("uno");
+
+      // innerHTML ci ritorna il contenuto testuale del tag
+      console.log("il contenuto del div è " + riferimento_div.innerHTML);
+
+      // recupero valore attributo
+      console.log(riferimento_div.getAttribute("id"));
+      console.log(riferimento_div.getAttribute("style"));
+
+      // modifico valore attributo
+      riferimento_div.setAttribute("nome_attr", "val");
+      riferimento_div.setAttribute("style", "color:green");
+      console.log(riferimento_div.getAttribute("style"));
+
+      // rimuovo valore attributo
+      riferimento_div.removeAttribute("style");
+      console.log(riferimento_div.getAttribute("style"));
+      console.log(riferimento_div.getAttribute("nome_attr"));
+
+
+      var riferimento_input= document.getElementById("due");
+      console.log("il contenuto dell'input è " + riferimento_input.getAttribute("value"));
+
+      // Questa funzione restituisce un array di riferimenti contenente tutti gli elementi dei tag col nome passato come parametro 
+      var riferimenti_nome_tag = document.getElementsByTagName("input");
+
+      // ritorna un array che contiene tutti i riferimenti a tutti i tag che hanno l'attributo class="nome_classe"
+      var riferimenti_nome_classe = document.getElementsByClassName("nome_classe");
+
+      // operazione per creare un elemento(tag)
+      var y =document.createElement("img");
+      // e impostargli un attributo
+      y.setAttribute("src", "http://www.google.it");
+
+      
+
+
+    </script>
+  </body>
+</html>

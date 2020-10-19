@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Hello, world!</title>
+    
+  </head>
+  <body>
+    
+  	<script>
+  	
+  		function somma(a, b){
+  			return a+b;
+  		}
+
+  		function sottrazione(a,b){
+  			return a-b;
+  		}
+
+  		function moltiplicazione(a,b){
+  			return a*b;
+  		}
+
+  		function divisione(a,b){
+  			if(b!=0){
+  				return a/b;
+  			}
+  			
+  		}
+
+  		var somma= somma(1,2);
+  		var sottrazione= sottrazione(4,2);
+  		var moltiplicazione= moltiplicazione(2,2);
+  		var divisione= divisione(4,2);
+
+  		console.log("somma: " + somma);
+  		console.log("sottrazione: " + sottrazione);
+  		console.log("moltiplicazione: " + moltiplicazione);
+  		console.log("divisione: " + divisione);
+
+
+  	// Creazione di oggetti su JavaScript
+  		var obj = {
+	  		"nome": "Gabriele",
+	  		"nome persona": "Gabriele",
+	  		"cognome": "Pescatore",
+	  		"somma": function(x,y){
+	  		return x+y;	
+  			}
+  		}
+
+
+	
+  	console.log(obj['nome persona']); //Usato soprattutto nel caso un attributo dell'oggetto ha un nome con le parole staccate
+  	console.log(obj.nome);
+  	console.log(obj.somma(3,4));
+
+  	var oggetto = {
+  		"sottrazione":function(x,y){
+  			return x-y;
+  		},
+  		"divisione":function(x,y){
+  			return  x/y;
+  		},
+  		"moltiplicazione":function(x,y){
+  			return x*y;
+  		},
+  		"somma": function(x,y){
+  			return x+y;
+  		}
+  	}
+
+	console.log(oggetto.moltiplicazione(3,4));
+	console.log(oggetto.divisione(16,4));
+	console.log(oggetto.somma(3,4));
+	console.log(oggetto.sottrazione(10,4));
+
+
+
+	var arr = [];
+	var arr1 = [1,2,3,4];
+	var arr2 = [];
+
+	arr2['nome'] = "angelo"; // In JS gli array possono avere posizioni anche non numeriche
+
+	var obj2 = {
+		"nome": "angelo"
+	}
+	console.log(obj2.nome); // 
+	console.log(arr2['nome']); // 
+
+	for(var chiave in arr2){   		// For per ciclare su collezioni che non hanno indici numerici ma ad esempio chiavi 
+		console.log(arr2[chiave]);
+	}
+
+
+	var arr = [];
+	arr[0] = "pippo";
+	arr[1] = "pluto";
+	arr[10] = "paperino";
+
+	for(var i=0; i<arr.length; i++){
+		console.log(arr[i]);
+	}
+
+	for(var chiave in arr){    
+		console.log(arr[chiave]);
+	}
+
+
+	// Funzione JS se  una stringa è palindroma
+
+	function palindrome(str){
+  			for(var i=0; i<(str.length/2); i++){
+  				if(str.charAt(i) != str.charAt(str.length - 1 -i)){
+  					return false;
+  				} 				
+  			}
+  			return true;
+  		}
+
+
+  	var stringa= "otto";
+  	console.log("Is palindrome: " + palindrome(stringa));
+
+  	</script>   
+
+
+
+  </body>
+</html>

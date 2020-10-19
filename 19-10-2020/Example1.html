@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Hello, world!</title>
+    
+  </head>
+  <body>
+
+    <h1>Ciao Mondo</h1>
+
+    <p>HJSDJSDH</p>
+
+    <div id="div_uno" style="color:red"> 
+    </div>
+
+    <input type="text" id="due" value="cocco">
+
+    <script type="text/javascript">
+
+      // Aggiungo dinamicamente un immagine al div_uno
+     var rif = document.getElementById("div_uno");
+
+     // creo il figlio
+     var figlio = document.createElement("img");
+
+     // Vengono settati gli attributi a figlio
+     figlio.setAttribute("src", "logo.jpg");
+     figlio.setAttribute("style", "border: 3px solid red");
+     
+     // Collego il figlio al padre
+     rif.appendChild(figlio);
+
+      
+
+
+    </script>
+  </body>
+</html>

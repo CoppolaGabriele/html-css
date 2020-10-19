@@ -1,0 +1,132 @@
+<html> <!-- Tag che identifica l'inizio del documento e il tipo di documento utilizzato-->
+
+	<head> <!-- Contiene lo heading della pagina (intestazione)-->
+		<title>La mia prima pagina!</title> <!-- Titolo che va sul nome della pagina-->
+		<meta author="Gabriele Coppola"> <!-- Serve per mettere nelle informazioni della pagina l'autore-->
+		<meta keywords="css,html,modis,adecco"> <!-- Inserisce nelle informazioni della pagine delle parole chiave che verranno mostrate nei motori di ricerca-->
+	</head>
+
+	<body> <!-- Tag che contiene il corpo principale della pagina web-->
+
+		<!-- Metodo senza pre-->
+		if(3>i){<br> <!-- Tag br serve per andare a capo-->
+		<t>	echo "ciao";<br>
+		} 
+
+		<!-- Metodo con pre-->
+		<pre>
+		if(3>i){
+			echo "ciao";
+		}
+		</pre>
+
+		<!-- Titoli che vanno da h1 a h6-->
+		<h1>Hello World</h1> 
+		<h2>Hello World</h2>
+		<h3>Hello World</h3>
+		<h4>Hello World</h4>
+		<h5>Hello World</h5>
+		<h6>Hello World</h6>
+
+		<!-- Tag sup fa andare in alto un elemento-->
+		2<sup>4</sup>
+
+		<!-- Tag sub fa andare in basso un elemento -->
+		H<sub>2</sub>O 
+
+
+		<!--Si usa principalmente per contenere del testo corposo -->
+		<p>Ciao Mondo</p> 
+
+		<!-- Serve per stampare una linea orizzontale-->
+		<hr> 
+
+		<!--Si usa principalmente per contenere una piccola parte di testo -->
+		<label>Testo nella label</label>
+
+		<!--Si usa quando si vuole avere un elemento che non è solo testo e si vuole spostare nella pagina -->
+		<div>Testo nel div</div> 
+
+
+		<!-- Unordered list con i puntini per ordinare -->
+		<ul>
+			<li>Cane</li>
+			<li>Gatto</li>
+			<li>Cammello</li>
+		</ul>
+
+
+		<!-- Ordered list con ordinazioni numeriche-->
+		<ol>
+			<li>Uno</li>
+			<li>Due</li>
+			<li>Tre</li>
+		</ol>
+
+
+		&amp; <!-- Serve per rappresentare il simbolo "&"-->
+		&lt; <!-- Serve per stampare il simbolo ">" -->
+		&gt; <!-- Serve per stampare il simbolo "<" -->
+		&agrave; <!-- Tutto ciò che viene dopo "&" viene chiamato comando di escape, permette di rendere globale il carattere che viene specificato (in caso di carattere)-->
+		&ugrave;
+		&aacute;
+		&iacute;
+		<br><br>
+
+		<!-- Permette l'inserimento di link ipertestuali all'interno del documento-->
+		<a target= "_new"  href="https://github.com/egalli64/slides"> Slides su Github di Emanuele Galli</a>
+		<br><br>
+		<table> <!-- Viene aperta una table-->
+			<thead> <!-- Tag che serve per l'intestazione della tabella-->
+				<tr> <!-- Tag che indica una riga nella tabella-->
+					<th>First Name</th> <!-- Tag che identifica una colonna nell'intestazione-->
+					<th>Last Name</th>
+					<th>Age</th>
+				</tr>
+			</thead>
+			<tbody> <!-- Tag che identifica il corpo della tabella-->
+				<tr>
+					<td>Paolo</td> <!-- Tag che identifica una riga nel corpo della tabella-->
+					<td>Limiti</td>
+					<td>25</td>
+				</tr>
+				<tr>
+					<td>Gianluca</td>
+					<td>Vacchi</td>
+					<td>40</td>
+				</tr>
+			</tbody>
+		</table><br>
+
+		<form action="index.html" method="GET">
+		
+			Username: <input type="text" name="user"><br>
+			Password: <input type="password" name="password"><br>
+			Sport: 
+			<input type="checkbox" name="sport1" value="F1">F1
+		 	<input type="checkbox" name="sport2" value="moto">MotoGp
+		 	<br>
+		 	Sesso:
+		 	Donna: <input type="radio" name="sesso" value="f">
+		 	Uomo: <input type="radio" name="sesso" value="m">
+
+		 	<textarea name="testo" id="pippo" class="area"></textarea>
+
+		 	<select name="comune">
+		 		<option value="Milano">Milano</option>
+		 		<option value="Pavia">Pavia</option>
+		 		<option value="Monza">Monza</option>
+		 	</select>
+
+		 	<input type="reset" value="Reset"> <input type="submit" value="Invia">
+
+		</form>
+
+
+		<!-- Tag img con attributo "src" per specificare il file immagine, attributo "alt" serve per far vedere un commento sull'immagine in caso essa non venga visualizzata correttamente-->
+		<img src="gatto_covid.jpg" alt="Gatto con mascherina">
+		<img src="https://www.legadelcane.org/wp-content/uploads/puppy-1903313_1920-1080x675.jpg"> <!-- Si possono anche inserire link-->
+
+	</body>
+
+</html>

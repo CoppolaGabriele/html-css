@@ -1,0 +1,48 @@
+
+	@media only screen and (max-width: 576px){  /*  Serve per dare al selettore una certa proprietà soltanto se viene soddisfatta la condizione tra (), "only screen"*/
+        #disappear{
+            background-color: lightblue;
+        }
+    }  
+
+    .titoliGrigi{
+    	color: #555555;
+    }
+
+    #secondoTitolo{
+    	color: #4CAF50;
+    }
+
+    #bottoneVerdeLogin{
+	    color: #fff;
+	    background-color: #4CAF50;
+	    font-family: "Segoe UI",Arial,sans-serif;
+        border-color: #4CAF50;
+    }
+
+
+    .logoSito{
+	    font-family: fontawesome;
+	    line-height: 1;
+	    font-size: 37px;
+	    letter-spacing: 3px;
+	    color: #555555;
+	    top: 17px;
+    }
+
+    .grey{
+    	color: #555555;
+    }
+
+    #boxDescrizione{
+        background-color: #D4EDDA;
+        padding: 20px;
+    }
+
+    .bottoniVerdi{
+        color: #fff;
+        background-color: #4CAF50;
+        font-family: "Segoe UI",Arial,sans-serif;
+        border-color: #4CAF50;
+    }
+

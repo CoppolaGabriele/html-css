@@ -1,0 +1,136 @@
+<!-- 1. Creare una funzione che data una stringa in input  restituisce solo le vocali.
+2. Creare una funzione che restituisce solo le consonanti maiuscole
+3. Creare una funzione che verifichi se due JSON sono uguali
+4. Creare una funzione che stampa la toString di un JSON
+5. Funzione che prende in input un JSON e stampa a video il corrispettivo csv
+6. Funzione che prende in input un array di JSON e stampa a video il corrispettivo csv -->
+ 
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Hello, world!</title>
+    
+  </head>
+  <body>
+    
+  	<script>
+  		
+  		// Esercizio 1
+  		function vocali(stringa){
+  			var nStr="";
+  			for(var i=0; i<stringa.length; i++){
+  				if((stringa.charAt(i) == "A" || stringa.charAt(i) == 'a') || (stringa.charAt(i) == "E" || stringa.charAt(i) == 'e') || (stringa.charAt(i) == "I" || stringa.charAt(i) == 'i') || (stringa.charAt(i) == "O" || stringa.charAt(i) == 'o') || (stringa.charAt(i) == "U" || stringa.charAt(i) == 'u')){
+  					nStr+=stringa.charAt(i);
+  				}
+  				
+  			}
+  			return nStr;
+  		}
+
+  		console.log("nuova stringa: " + vocali("bufferellino"));
+
+  		
+  		// Esercizio 2
+  		function consonantiUp(stringa){
+  			var nStr="";
+  			for(var i=0; i<stringa.length; i++){
+  				if((stringa.charAt(i) != "A" || stringa.charAt(i) != "a") || (stringa.charAt(i) != "E" || stringa.charAt(i) != "e") || (stringa.charAt(i) != "I" || stringa.charAt(i) != "i") || (stringa.charAt(i) != "O" || stringa.charAt(i) != "o") || (stringa.charAt(i) != "U" || stringa.charAt(i) != "u")){
+  					nStr+=stringa.charAt(i);
+  				}			
+  			} 
+  			return nStr;
+  		}
+
+  		console.log("nuova stringa: " + consonantiUp("abba"));
+
+
+  		// Esercizio 3
+
+  	function matchJson(obj1,obj2){
+
+  		var keys1 = Object.keys(obj1);
+  		var keys2 = Object.keys(obj2);
+  		
+  		if(keys1.length==keys2.length){
+  			for(var i=0; i<keys1.length; i++){
+  				if(keys1[i]!=keys2[i]){
+  					return false;
+  				}
+  				else{
+  					for(var chiave in obj1){   		 
+  						for(var chiave in obj2){
+  							if(obj1[chiave]!=obj2[chiave]){
+  								return false;
+  							}
+  						}
+  					}
+  				}
+  			}
+  		}
+  		return true;
+	 }	
+  		
+	    // Test Ex.3
+  		var persona1 = {
+	  		"nome": "Gabriele",
+	  		"cognome": "Pescatore",
+  		}
+
+  		var persona2 = {
+	  		"nome": "Gabriele",
+	  		"cognome": "Pescatore",
+  		}
+
+  		console.log("Sono uguali i due JSON? -> " + matchJson(persona1,persona2));
+
+
+  		// Esercizio 4
+
+  		function jsonToString(obj){
+  			var myJSON = JSON.stringify(obj);
+			  return myJSON; 		
+  		}
+		
+  		var persona1 = {
+	  		"nome": "Gabriele",
+	  		"cognome": "Pescatore",
+  		}
+
+  		console.log("To string del JSON --> " + jsonToString(persona1));
+
+  		// Esercizio 5
+
+  		function jsonCsv(obj){
+  			var stringa= "";
+	  		var keys= Object.keys(obj);
+	  		for(var i=0; i<keys.length; i++){
+	  				stringa+= "," + keys[i] + ",";
+	  				for(var values in obj){
+	  						stringa+= "," + obj[values] +",";
+	  				}
+	  		}
+	  		return stringa;
+ 		
+  		}
+
+  		var persona1 = {
+	  		"nome": "Gabriele",
+	  		"cognome": "Pescatore",
+  		}
+
+  		console.log("To string del JSON --> " + jsonCsv(persona1));
+
+  		// Esercizio 6 
+  	
+	
+  	</script>   
+
+
+
+  </body>
+</html>

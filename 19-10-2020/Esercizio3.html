@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+
+		<!-- l'attributo "onchange" permette di richiamare il valore dell'attributo dopo aver premuto il tasto invio, "onkeyup" invece lo richiama al rilascio del tasto -->
+		<!-- Metodo 1 -->
+		<!-- <input type="text" id="my-input" onkeyup = "funzione_modifica()"> -->
+		<input type="text" id="my-input">
+
+		<div id="div-risultato"></div>
+
+		<script type="text/javascript">
+
+			// Metodo 2 
+			//onchange= "funzione_modifica()" su my-input
+			/*
+			var rif = document.getElementById("my-input");
+			rif.addEventListener("keyup", funzione_modifica);
+		
+			function funzione_modifica(){
+				var rif = document.getElementById("my-input");
+				var valore_attuale = rif.value;
+				var rif_div_risultato = document.getElementById("div-risultato");
+				rif_div_risultato.innerHTML = valore_attuale;
+			} */
+
+
+
+			// instanzio obj AJAX
+			var xhttp = new XMLHttpRequest();
+			// setto cosa fare quando tornano i dati
+			xhttp.onreadystatechange = function(){
+				// solo se la chiamata è completa e risponde 200
+				if(this.readyState == 4 && this.status == 200){
+					// innerHTML del risultato
+					document.getElementById("div-risultato").innerHTML = this.responseText;
+				}
+			};
+
+			xhttp.open("GET", "https://jsonplaceholder.typicode.com/todos" , true);
+			xhttp.send();
+
+			// convertire Stringa in JSON example
+			var str = "{'nome' : 'Gabriele', 'cognome' : 'Coppola' }";
+			var json = JSON.parse(str);
+
+			// converire JSON in String
+			var str = JSON.stringify({'nome' : 'Gabriele', ' cognome' : 'Coppola' });
+
+		</script>
+	</body>
+</html>
